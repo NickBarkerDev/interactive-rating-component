@@ -1,13 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
 
-@bg-color: #f9f9f9;
+@orange: hsl(25, 97%, 53%);
+@active-hover-grey: hsl(217, 12%, 63%);
+@text-grey: hsl(216, 12%, 54%);
+@content-bg: hsl(213, 19%, 18%);
+@body-bg: hsl(216, 12%, 8%);
 
-body {
-  background: @bg-color;
-  font-family: "Overpass", sans-serif;
+/* ----------RESET---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+h1,
+p,
+img,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
 
+/* set up default body styles */
+body {
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ----------END RESET---------- */
+
+//FLEX Utility Class
+.flex {
+  display: flex;
+}
+
+body {
+  min-height: 100vh;
+  background-color: @body-bg;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  main {
+    width: 30rem;
+    background-color: @content-bg;
+
+    h1 {
+      color: white;
+    }
+  }
+
+  p {
+    color: @text-grey;
+  }
+
+  li:hover {
+    color: @active-hover-grey;
+  }
+}
 
 
 

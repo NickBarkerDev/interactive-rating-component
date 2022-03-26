@@ -12,9 +12,65 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/overpass/v10/qFda35WCmI96Ajtm83upeyoaX6QPnlo6G_TrOQ.ttf) format('truetype');
 }
+/* ----------RESET---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+h1,
+p,
+img,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+/* set up default body styles */
 body {
-  background: #f9f9f9;
-  font-family: "Overpass", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+/* make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* ----------END RESET---------- */
+.flex {
+  display: flex;
+}
+body {
+  min-height: 100vh;
+  background-color: hsl(216, 12%, 8%);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main {
+  width: 30rem;
+  background-color: hsl(213, 19%, 18%);
+}
+body main h1 {
+  color: white;
+}
+body p {
+  color: hsl(216, 12%, 54%);
+}
+body li:hover {
+  color: hsl(217, 12%, 63%);
 }
 .attribution {
   text-align: center;
