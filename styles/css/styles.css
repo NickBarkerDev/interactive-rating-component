@@ -53,6 +53,7 @@ select {
   display: flex;
 }
 body {
+  display: flex;
   min-height: 100vh;
   background-color: hsl(216, 12%, 8%);
   flex-direction: column;
