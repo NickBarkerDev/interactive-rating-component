@@ -1,17 +1,3 @@
-@font-face {
-  font-family: 'Overpass';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/overpass/v10/qFda35WCmI96Ajtm83upeyoaX6QPnlo6_PPrOQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Overpass';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/overpass/v10/qFda35WCmI96Ajtm83upeyoaX6QPnlo6G_TrOQ.ttf) format('truetype');
-}
 /* ----------RESET---------- */
 *,
 *::before,
@@ -22,7 +8,9 @@ h1,
 p,
 img,
 ul,
-li {
+ol,
+li,
+div {
   margin: 0;
   padding: 0;
 }
@@ -49,6 +37,20 @@ select {
   font: inherit;
 }
 /* ----------END RESET---------- */
+@font-face {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/overpass/v10/qFda35WCmI96Ajtm83upeyoaX6QPnlo6_PPrOQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/overpass/v10/qFda35WCmI96Ajtm83upeyoaX6QPnlo6G_TrOQ.ttf) format('truetype');
+}
 .flex {
   display: flex;
 }
@@ -59,19 +61,42 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'Overpass', sans-serif;
 }
 body main {
-  width: 30rem;
-  background-color: hsl(213, 19%, 18%);
+  background-image: linear-gradient(180deg, hsl(215, 20%, 17%), hsl(215, 27%, 12%));
+  width: 25rem;
+  padding: 1.5rem;
+  border-radius: 16px;
 }
-body main h1 {
+body main img {
+  display: inline;
+  padding: 1rem;
+  background-color: hsl(215, 18%, 19%);
+  margin: 0 0.5rem 1rem 0;
+  border-radius: 50%;
+}
+body main .static-text h1 {
   color: white;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
-body p {
-  color: hsl(216, 12%, 54%);
-}
-body li:hover {
+body main .static-text p {
+  font-size: 15px;
   color: hsl(217, 12%, 63%);
+  margin-bottom: 1rem;
+}
+body .interactive ol {
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+body .interactive ol li {
+  background-color: hsl(215, 18%, 19%);
+  height: auto;
+  width: auto;
+  padding: 1rem;
+  border-radius: 50%;
 }
 .attribution {
   text-align: center;
